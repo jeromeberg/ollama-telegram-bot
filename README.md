@@ -65,7 +65,7 @@ Edit the `config.json` file in the project root directory:
 Ensure that the model you specified in `config.json` is downloaded and available on your Ollama server.
 
 ```bash
-ollama download <model-name>
+ollama pull <model-name>
 ```
 
 Also make sure that ollama is running.
