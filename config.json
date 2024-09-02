@@ -1,0 +1,8 @@
+{
+    "botToken": "YOUR_TELEGRAM_BOT_TOKEN",
+    "prePrompt": "You are a friendly bot. Please respond to the following queries in a concise and helpful manner:\n",
+    "model": "MODEL_NAME",
+    "serverUrl": "http://localhost:11434/api/generate",
+    "enableLog": true,
+    "startMessage": "Hello I am a friendly bot! How can I help you?"
+}
