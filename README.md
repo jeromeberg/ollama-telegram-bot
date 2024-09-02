@@ -1,6 +1,6 @@
 # ollama-telegram-bot
 
-ollama-telegram-bot is a Telegram bot built in Go that interfaces with a large language model (LLM) using Ollama.
+ollama-telegram-bot is a Telegram bot built in Go that interfaces with a local large language model (LLM) using Ollama.
 
 ## Features
 
@@ -18,7 +18,13 @@ Make sure Golang is installed on your machine. You can install it from the offic
 
 #### Ollama
 
-Make sure Ollama is installed on your machine. You can download it from the official [Ollama website](https://ollama.com/download) or use a package manager like Homebrew: `brew install ollama`
+Make sure Ollama is installed and running on your machine. You can download it from the official [Ollama website](https://ollama.com/download) or use a package manager like Homebrew: `brew install ollama`
+
+Ensure that the model you specify in `config.json` is downloaded:
+
+```bash
+ollama pull <model-name>
+```
 
 ### Build the app
 
@@ -39,7 +45,7 @@ go build -o bot ./src
 1.	Open Telegram and search for the user BotFather.
 2.	Start a chat with BotFather and use the `/start` command.
 3.	Create a new bot by typing `/newbot` and follow the instructions to set up your bot name and username.
-4.	After creation, BotFather will provide you with a token. Save this token as it will be needed to configure your bot.
+4.	After creation, BotFather will provide you with a token. Save this token as it will be needed to configure the bot.
 
 ### Configure the Bot
 
@@ -60,16 +66,6 @@ Edit the `config.json` file in the project root directory:
 - Replace MODEL_NAME with the name of the model you are using. (e.g.: `gemma2`)
 - Replace `http://localhost:11434/api/generate` with the URL of your Ollama server if necessary.
 
-### Download ollama model
-
-Ensure that the model you specified in `config.json` is downloaded and available on your Ollama server.
-
-```bash
-ollama pull <model-name>
-```
-
-Also make sure that ollama is running.
-
 ### Run the Bot
 
-Once everything is configured, run your bot using: `./bot`
+Once everything is configured, run the bot using: `./bot`
